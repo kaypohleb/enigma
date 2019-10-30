@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fullLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="25dp"
+    android:background="#2d2c33"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="14dp"
+            tools:layout_editor_absoluteY="8dp">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Reflector: "
+                android:textSize="20sp"
+                tools:layout_editor_absoluteX="74dp"
+                tools:layout_editor_absoluteY="1047dp"
+                android:fontFamily="@font/productsans_bold"
+                android:textColor="#eee"/>
+
+            <Spinner
+                android:id="@+id/reflectorChoice"
+                android:layout_width="252dp"
+                android:layout_height="46dp"
+                android:layout_weight="1"
+                android:backgroundTint="#eee"
+                android:fontFamily="@font/productsans_regular"
+                android:textColor="#eee"
+                tools:layout_editor_absoluteX="216dp"
+                tools:layout_editor_absoluteY="100dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="309dp">
+
+            <Spinner
+                android:id="@+id/wheel3"
+                android:layout_width="124dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:backgroundTint="#eee"
+                android:textColor="#eee"
+                android:fontFamily="@font/productsans_regular" />
+
+            <Spinner
+                android:id="@+id/wheel2"
+                android:layout_width="126dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:backgroundTint="#eee"
+                android:textColor="#eee"
+                android:fontFamily="@font/productsans_regular" />
+
+            <Spinner
+                android:id="@+id/wheel1"
+                android:layout_width="126dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:backgroundTint="#eee"
+                android:textColor="#eee"
+                android:fontFamily="@font/productsans_regular" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="357dp">
+
+            <EditText
+                android:id="@+id/wheelPos3"
+                android:layout_width="126dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:gravity="center_horizontal"
+                android:hint="A"
+                android:inputType="textPersonName"
+                android:maxLength="1"
+                android:fontFamily="@font/productsans_bold"
+                android:textColor="#eee"
+                android:textColorHint="#dbdbdb"/>
+
+            <EditText
+                android:id="@+id/wheelPos2"
+                android:layout_width="126dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:gravity="center_horizontal"
+                android:hint="A"
+                android:inputType="textPersonName"
+                android:maxLength="1"
+                android:fontFamily="@font/productsans_bold"
+                android:textColor="#eee"
+                android:textColorHint="#dbdbdb"/>
+
+            <EditText
+                android:id="@+id/wheelPos1"
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:gravity="center_horizontal|clip_horizontal"
+                android:hint="A"
+                android:inputType="textPersonName"
+                android:maxLength="1"
+                android:fontFamily="@font/productsans_bold"
+                android:textColor="#eee"
+                android:textColorHint="#dbdbdb"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteY="408dp">
+
+            <TextView
+                android:id="@+id/titlePlugboard"
+                android:layout_width="153dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Plugboard"
+                android:textSize="20sp"
+                tools:layout_editor_absoluteX="74dp"
+                tools:layout_editor_absoluteY="13dp"
+                android:fontFamily="@font/productsans_bold"
+                android:textColor="#eee"/>
+
+            <EditText
+                android:id="@+id/textBoxPlug"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="A:Z"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toEndOf="@+id/titlePlugboard"
+                android:fontFamily="@font/productsans_regular"
+                android:textColor="#eee"
+                android:textColorHint="#dbdbdb"/>
+
+            <Button
+                android:id="@+id/btnEnter"
+                android:layout_width="82dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Insert"
+                android:fontFamily="@font/productsans_bold"
+                android:textColor="#eee"
+                android:background="#2d2c33"/>
+
+            <Button
+                android:id="@+id/btnX"
+                android:layout_width="82dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Delete"
+                tools:layout_editor_absoluteY="13dp"
+                android:fontFamily="@font/productsans_bold"
+                android:textColor="#eee"
+                android:background="#2d2c33"/>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textBoxPlug"
+            android:fontFamily="@font/productsans_regular"
+            android:textColor="#eee">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteY="712dp">
+
+            <TextView
+                android:id="@+id/inputTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Input:"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+                android:fontFamily="@font/productsans_bold"
+                android:textColor="#eee"/>
+
+            <EditText
+                android:id="@+id/actInput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Character"
+                android:inputType="textPersonName"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/inputTitle"
+                app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+                android:fontFamily="@font/productsans_regular"
+                android:textColor="#eee"
+                android:textColorHint="#dbdbdb"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/inputText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/actInput"
+            android:fontFamily="@font/productsans_regular"
+            android:textColor="#eee"/>
+
+
+        <TextView
+            android:id="@+id/outputTitle"
+            android:layout_width="match_parent"
+            android:layout_height="27dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Output"
+            android:textSize="20sp"
+            android:fontFamily="@font/productsans_bold"
+            android:textColor="#eee"/>
+
+        <TextView
+            android:id="@+id/outputText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/productsans_regular"
+            android:textColor="#eee"/>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

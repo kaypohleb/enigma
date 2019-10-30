@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">EnigmaEmulator</string>
+    <string name="title_activity_encrypt">EncryptAct</string>
+    <string name = "plugA">A</string>
+    <string name = "plugB">B</string>
+    <string name = "plugC">C</string>
+    <string name = "plugD">D</string>
+    <string name = "plugE">E</string>
+    <string name = "plugF">F</string>
+    <string name = "plugG">G</string>
+    <string name = "plugH">H</string>
+    <string name = "plugI">I</string>
+    <string name = "plugJ">J</string>
+    <string name = "plugK">K</string>
+    <string name = "plugL">L</string>
+    <string name = "plugM">M</string>
+    <string name = "plugN">N</string>
+    <string name = "plugO">O</string>
+    <string name = "plugP">P</string>
+    <string name = "plugQ">Q</string>
+    <string name = "plugR">R</string>
+    <string name = "plugS">S</string>
+    <string name = "plugT">T</string>
+    <string name = "plugU">U</string>
+    <string name="t">T</string>
+
+
+</resources>
