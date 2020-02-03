@@ -1,9 +1,11 @@
 package com.example.calebfoo.enigmaemulator;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -103,23 +105,21 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-                if (wheelPos[0].isFocused()||firstTry1){
-                    if(s.length()>0){
-                        char c =  s.charAt(0);
-                        if(c >= 'a' && c <= 'z'){
+                if (wheelPos[0].isFocused()) {
+                    if (s.length() > 0) {
+                        char c = s.charAt(0);
+                        if (c >= 'a' && c <= 'z') {
                             c = Character.toUpperCase(c);
                             wheelPos[0].setText(String.valueOf(c));
-
-                        }
-                        if(c >= 'A' && c <= 'Z'){
                             rotorsClass.rotors[0].setInitialPos(c);
+                        } else if (c >= 'A' && c <= 'Z') {
+                            rotorsClass.rotors[0].setInitialPos(c);
+                        } else {
+                            Toast.makeText(getApplicationContext(), "Not a Character", Toast.LENGTH_SHORT).show();
+                            wheelPos[0].setText("");
                         }
+                        Log.i("WheelPOS2",String.valueOf(rotorsClass.rotors[2].getPos()));
                     }
-                    if(firstTry1){
-
-                        Toast.makeText(getApplicationContext(),"1",Toast.LENGTH_SHORT).show();
-                    }
-                    firstTry1=false;
 
                 }
 
@@ -138,24 +138,24 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-                if (wheelPos[1].isFocused()||firstTry2){
-                    if(s.length()>0){
-                        char c =  s.charAt(0);
-                        if(c >= 'a' && c <= 'z'){
+                if (wheelPos[1].isFocused()) {
+                    if (s.length() > 0) {
+                        char c = s.charAt(0);
+                        if (c >= 'a' && c <= 'z') {
                             c = Character.toUpperCase(c);
                             wheelPos[1].setText(String.valueOf(c));
-
-                        }
-                        if(c >= 'A' && c <= 'Z'){
                             rotorsClass.rotors[1].setInitialPos(c);
+                        } else if (c >= 'A' && c <= 'Z') {
+                            rotorsClass.rotors[1].setInitialPos(c);
+                        } else {
+                            Toast.makeText(getApplicationContext(), "Not a Character", Toast.LENGTH_SHORT).show();
+                            wheelPos[1].setText("");
                         }
+                        Log.i("WheelPOS2",String.valueOf(rotorsClass.rotors[2].getPos()));
                     }
-                    if(firstTry2){
 
-                        Toast.makeText(getApplicationContext(),"2",Toast.LENGTH_SHORT).show();
-                    }
-                    firstTry2=false;
                 }
+
 
 
             }
@@ -178,15 +178,17 @@ public class MainActivity extends AppCompatActivity {
                         char c =  s.charAt(0);
                         if(c >= 'a' && c <= 'z'){
                             c = Character.toUpperCase(c);
-
-                        }
-                        if(c >= 'A' && c <= 'Z'){
+                            wheelPos[2].setText(String.valueOf(c));
                             rotorsClass.rotors[2].setInitialPos(c);
-                            firstTry3=false;
+                        }else if(c >= 'A' && c <= 'Z'){
+                            rotorsClass.rotors[2].setInitialPos(c);
                         }
+                        else {
+                            Toast.makeText(getApplicationContext(),"Not a Character",Toast.LENGTH_SHORT).show();
+                            wheelPos[2].setText("");
+                        }
+                        Log.i("WheelPOS2",String.valueOf(rotorsClass.rotors[2].getPos()));
                     }
-
-
 
                 }
             }
@@ -200,7 +202,6 @@ public class MainActivity extends AppCompatActivity {
                     Rotor newRotor = new Rotor(text, rotorsClass.getRotorString(text), rotorsClass.getKnockOffPoints(text));
                     rotorsClass.rotors[0] = newRotor;
                     wheelPos[0].setVisibility(View.VISIBLE);
-                    wheelPos[0].setText("A");
                 }
             }
 
@@ -247,13 +248,17 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String temp = plugInput.getText().toString();
                 if (temp.contains(":")){
+                    temp = temp.toUpperCase();
                     plugboard.cleanString(temp);
                     TextView newtv = createNewTextView(temp);
+                    newtv.setTextColor(Color.WHITE);
                     stackTv.push(newtv);
                     linear.addView(newtv);
+                    plugInput.setText("");
                 }
                 else{
-                    insertPlug.setText("");
+                    plugInput.setText("");
+                    Toast.makeText(getApplicationContext(),"Input typed in incorrect format",Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -305,7 +310,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
     private char encryptLetter(char c){
-        return plugboard.checkSwap(plugboard.checkSwap(rotorsClass.sendForward(reflector.reflect(rotorsClass.sendInverse(c)))));
+        return plugboard.checkSwap(rotorsClass.sendForward(reflector.reflect(rotorsClass.sendInverse(c))));
     }
 
 

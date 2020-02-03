@@ -1,6 +1,9 @@
 <resources>
+<!--    App strings-->
     <string name="app_name">EnigmaEmulator</string>
     <string name="title_activity_encrypt">EncryptAct</string>
+
+<!--    Plug strings -->
     <string name = "plugA">A</string>
     <string name = "plugB">B</string>
     <string name = "plugC">C</string>
@@ -19,10 +22,20 @@
     <string name = "plugP">P</string>
     <string name = "plugQ">Q</string>
     <string name = "plugR">R</string>
-    <string name = "plugS">S</string>
+    <string name = "plugS">sS</string>
     <string name = "plugT">T</string>
     <string name = "plugU">U</string>
     <string name="t">T</string>
+
+<!--    UI Strings -->
+    <string name = "plugboard_placeholder">A:Z</string>
+    <string name = "insert_button">Insert</string>
+    <string name = "delete">Delete</string>
+    <string name = "Plugboard_string">Plugboard: </string>
+    <string name = "Reflector_string">Reflector: </string>
+    <string name = "Input_string">Input: </string>
+    <string name = "Input_hint">Any Char</string>
+    <string name = "Output_string">Output: </string>
 
 
 </resources>

@@ -1,5 +1,7 @@
 package com.example.calebfoo.enigmaemulator;
 
+import android.util.Log;
+
 public class Rotor {
     private String plainText = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     private String originalMap;
@@ -67,11 +69,13 @@ public class Rotor {
         return (char)(this.pos+64);
     }
     public void setInitialPos(char c){
-        int n = Character.getNumericValue(c)-65;
+        int n = Character.getNumericValue(c)-10;
+        this.pos = 0;
+        Log.i("InitPos",String.valueOf(n));
         this.alphaMap = this.originalMap;
         if(n>0) {
             for (int i = 0; i < n; i++) {
-                step();
+                posIncrement();
             }
         }
     }

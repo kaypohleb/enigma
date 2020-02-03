@@ -21,7 +21,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:orientation="horizontal"
             tools:layout_editor_absoluteX="14dp"
             tools:layout_editor_absoluteY="8dp">
@@ -31,13 +30,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/productsans_bold"
                 android:gravity="center"
-                android:text="Reflector: "
+                android:text="@string/Reflector_string"
+                android:textColor="#eee"
                 android:textSize="20sp"
                 tools:layout_editor_absoluteX="74dp"
-                tools:layout_editor_absoluteY="1047dp"
-                android:fontFamily="@font/productsans_bold"
-                android:textColor="#eee"/>
+                tools:layout_editor_absoluteY="1047dp" />
 
             <Spinner
                 android:id="@+id/reflectorChoice"
@@ -55,7 +54,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:orientation="horizontal"
             tools:layout_editor_absoluteX="8dp"
             tools:layout_editor_absoluteY="309dp">
@@ -66,8 +64,8 @@
                 android:layout_height="40dp"
                 android:layout_weight="1"
                 android:backgroundTint="#eee"
-                android:textColor="#eee"
-                android:fontFamily="@font/productsans_regular" />
+                android:fontFamily="@font/productsans_regular"
+                android:textColor="#eee" />
 
             <Spinner
                 android:id="@+id/wheel2"
@@ -75,8 +73,8 @@
                 android:layout_height="40dp"
                 android:layout_weight="1"
                 android:backgroundTint="#eee"
-                android:textColor="#eee"
-                android:fontFamily="@font/productsans_regular" />
+                android:fontFamily="@font/productsans_regular"
+                android:textColor="#eee" />
 
             <Spinner
                 android:id="@+id/wheel1"
@@ -84,14 +82,13 @@
                 android:layout_height="40dp"
                 android:layout_weight="1"
                 android:backgroundTint="#eee"
-                android:textColor="#eee"
-                android:fontFamily="@font/productsans_regular" />
+                android:fontFamily="@font/productsans_regular"
+                android:textColor="#eee" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:orientation="horizontal"
             tools:layout_editor_absoluteX="8dp"
             tools:layout_editor_absoluteY="357dp">
@@ -102,13 +99,14 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
+                android:fontFamily="@font/productsans_bold"
                 android:gravity="center_horizontal"
-                android:hint="A"
+                android:hint="@string/plugA"
                 android:inputType="textPersonName"
                 android:maxLength="1"
-                android:fontFamily="@font/productsans_bold"
                 android:textColor="#eee"
-                android:textColorHint="#dbdbdb"/>
+                android:textColorHint="#777777"
+                android:importantForAutofill="no" />
 
             <EditText
                 android:id="@+id/wheelPos2"
@@ -116,13 +114,14 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
+                android:fontFamily="@font/productsans_bold"
                 android:gravity="center_horizontal"
-                android:hint="A"
+                android:hint="@string/plugA"
                 android:inputType="textPersonName"
                 android:maxLength="1"
-                android:fontFamily="@font/productsans_bold"
                 android:textColor="#eee"
-                android:textColorHint="#dbdbdb"/>
+                android:textColorHint="#777777"
+                android:importantForAutofill="no" />
 
             <EditText
                 android:id="@+id/wheelPos1"
@@ -130,14 +129,14 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
+                android:fontFamily="@font/productsans_bold"
                 android:gravity="center_horizontal|clip_horizontal"
-                android:hint="A"
+                android:hint="@string/plugA"
                 android:inputType="textPersonName"
                 android:maxLength="1"
-                android:fontFamily="@font/productsans_bold"
                 android:textColor="#eee"
-                android:textColorHint="#dbdbdb"
-                />
+                android:textColorHint="#777777"
+                android:importantForAutofill="no" />
         </LinearLayout>
 
         <LinearLayout
@@ -151,48 +150,45 @@
                 android:id="@+id/titlePlugboard"
                 android:layout_width="153dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:fontFamily="@font/productsans_bold"
                 android:gravity="center"
-                android:text="Plugboard"
+                android:text="@string/Plugboard_string"
+                android:textColor="#eee"
                 android:textSize="20sp"
                 tools:layout_editor_absoluteX="74dp"
-                tools:layout_editor_absoluteY="13dp"
-                android:fontFamily="@font/productsans_bold"
-                android:textColor="#eee"/>
+                tools:layout_editor_absoluteY="13dp" />
 
             <EditText
                 android:id="@+id/textBoxPlug"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:ems="10"
-                android:hint="A:Z"
-                android:inputType="textPersonName"
-                app:layout_constraintStart_toEndOf="@+id/titlePlugboard"
                 android:fontFamily="@font/productsans_regular"
+                android:hint="@string/plugboard_placeholder"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
                 android:textColor="#eee"
-                android:textColorHint="#dbdbdb"/>
+                android:textColorHint="#777777"
+                app:layout_constraintStart_toEndOf="@+id/titlePlugboard" />
 
             <Button
                 android:id="@+id/btnEnter"
                 android:layout_width="82dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Insert"
+                android:background="#2d2c33"
                 android:fontFamily="@font/productsans_bold"
-                android:textColor="#eee"
-                android:background="#2d2c33"/>
+                android:text="@string/insert_button"
+                android:textColor="#eee" />
 
             <Button
                 android:id="@+id/btnX"
                 android:layout_width="82dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Delete"
-                tools:layout_editor_absoluteY="13dp"
+                android:background="#2d2c33"
                 android:fontFamily="@font/productsans_bold"
+                android:text="@string/delete"
                 android:textColor="#eee"
-                android:background="#2d2c33"/>
+                tools:layout_editor_absoluteY="13dp" />
 
         </LinearLayout>
 
@@ -221,7 +217,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:orientation="horizontal"
             tools:layout_editor_absoluteY="712dp">
 
@@ -230,13 +225,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/productsans_bold"
                 android:gravity="center"
-                android:text="Input:"
+                android:text="@string/Input_string"
+                android:textColor="#eee"
                 android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/scrollView2"
-                android:fontFamily="@font/productsans_bold"
-                android:textColor="#eee"/>
+                app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
 
             <EditText
                 android:id="@+id/actInput"
@@ -244,16 +239,17 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
-                android:hint="Character"
+                android:fontFamily="@font/productsans_regular"
+                android:hint="@string/Input_hint"
                 android:inputType="textPersonName"
+                android:textColor="#eee"
+                android:textColorHint="#777777"
                 android:textSize="15sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/inputTitle"
                 app:layout_constraintTop_toBottomOf="@+id/scrollView2"
-                android:fontFamily="@font/productsans_regular"
-                android:textColor="#eee"
-                android:textColorHint="#dbdbdb"/>
+                android:importantForAutofill="no" />
 
         </LinearLayout>
 
@@ -274,11 +270,11 @@
             android:layout_width="match_parent"
             android:layout_height="27dp"
             android:layout_weight="1"
-            android:gravity="center"
-            android:text="Output"
-            android:textSize="20sp"
             android:fontFamily="@font/productsans_bold"
-            android:textColor="#eee"/>
+            android:gravity="center"
+            android:text="@string/Output_string"
+            android:textColor="#eee"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/outputText"
